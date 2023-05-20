@@ -27,9 +27,9 @@ const updateItem = (req: Request, res: Response) => {
 }
 
 
-const postItem = (req: Request, res: Response) => {
+const postItem = ({ body }: Request, res: Response) => {
     try {
-
+        res.send(body);
     } catch (error) {
         handleHttp(res, 'ERROR_POST_ITEM')
     }
